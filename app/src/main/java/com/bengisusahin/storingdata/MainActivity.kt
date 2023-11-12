@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         //SharedPreferences - XML - Key-Value kucuk veritabanlari
         sharedPref = getSharedPreferences("com.bengisusahin.storingdata", MODE_PRIVATE) //MODE_PRIVATE benim verielerime benim uygulamam ulassin sadece
 
-        ageFromPref = sharedPref.getInt("age", -1) //default value
+        ageFromPref = sharedPref.getInt("age", -1) //o anahtarda bir deger yoksa default value dondurmesi gerek
         if (ageFromPref == -1){ //demek ki kayitli bir veri yok
             binding.textView.text = "Your age :"
         }else{
